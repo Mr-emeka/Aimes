@@ -1,33 +1,213 @@
-.App {
-  text-align: center;
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+body{
+      background-color:whitesmoke;
+}
+.navbar{
+  display:flex;
+  background:black;
+  color:white;
+  padding:15px;
+  position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.brand{
+  margin:0;
+}
+.brand img{
+ width:200px;
+
+}
+.navbar-list{
+  display:flex;
+  list-style:none;
+   flex-direction: row;
+   margin-left:auto;
+}
+.nav-link{
+  text-decoration:none;
+  color:white;
+  padding:15px;
+  font-weight:200; 
+  cursor:pointer;
+}
+.hero{
+  position:relative;
+  background-image:linear-gradient(
+               to right bottom,
+               rgba(0, 0, 0, 0.8),
+               rgba(0, 0, 0, 0.7)),
+               url('./hero.jpg');
+  width:100%;
+  background-repeat:no-repeat;
+  height:95vh;
+  background-position:top;
+  background-size:cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.content {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align:center;  
+}
+.text-primary {
+     color: white;
+     text-transform: uppercase;  
+     backface-visibility:hidden;
+     margin-bottom: 50px;
+      
+}
+.primary-main{
+  display:block;
+  font-size:40px;
+  font-weight:200; 
+  letter-spacing:15px;
+  animation: MoveInLeft 1s ease-out;
+
+}
+.primary-sub{
+  display:block;
+   font-size:20px;
+  font-weight:200; 
+  letter-spacing:13px;
+ animation: MoveInRight 1s ease-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.icon img{
+  height:70px;
+  margin:0 10px;
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes MoveInLeft{
+0%{ 
+  opacity:0;
+     transform:translateX(-100px);
+}
+80%{
+     transform:translateX(30px);
+}
+100%{
+  opacity:1;
+     transform:translateX(0px);
+}
+}
+@keyframes MoveInRight{
+0%{ 
+  opacity:0;
+     transform:translateX(100px);
+}
+80%{
+     transform:translateX(-30px);
+}
+100%{
+  opacity:1;
+     transform:translateX(0px);
+}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes moveInBottom{
+0%{ 
+  opacity:0;
+     transform:translateY(50px);
+}
+
+100%{
+  opacity:1;
+     transform:translate(0);
+}
+}
+#about{
+  padding:40px;
+  margin-top:40px;
+  margin-bottom:50px;
+}
+.header-1{
+  padding:30px;
+  margin-bottom:20px;
+  text-align:center;
+  text-transform: uppercase;
+  font-size:30px;
+  font-weight:bold; 
+  letter-spacing:5px;
+  
+}
+.about-section{
+  display:grid;
+  grid-template-columns:2fr 1fr ;
+  grid-gap: 3em;
+}
+
+.bio{
+  justify-self:start;
+  padding: 50px 10px;
+}
+.img-profile{
+  height:300px;
+  width:300px;
+  border-radius:100%;
+  justify-self:center;
+  align-self:center;
+}
+.skill-section{
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+     padding:30px;
+     grid-auto-rows: minmax(300px, auto);
+     align-content: center;
+     grid-gap: 3em;
+     transition: .3s ease-in all;
+}
+.skill-section >div {
+     background: #fff;
+     text-align: center;
+     padding:40px;
+}
+.header-3{
+     text-align: center;
+     margin-bottom: 50px;
+}
+
+.text-paragraph {
+     padding: 10px;
+     margin-bottom:40px;
+}
+
+.img-skill{
+     height: 100px;
+     width: 100px;
+     border-radius: 50%;
+     padding: 30px;
+}
+@media (max-width: 780px){
+ .about-section{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-gap: 1em;
+} 
+}
+
+
+footer{
+  background-color:black;
+  width:100%;
+  color:white;
+  padding:20px;
+  text-align:center;
+  letter-spacing:2px;
+  font-size: .8em;
+  font-weight:bold;
+}
+.footer-span{
+ color: brown;
 }
