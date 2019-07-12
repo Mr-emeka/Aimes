@@ -2,10 +2,11 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     font-family: sans-serif;
+
 }
 body{
       background-color:whitesmoke;
+      cursor: default;
 }
 .navbar{
   display:flex;
@@ -13,9 +14,10 @@ body{
   color:white;
   padding:15px;
   position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
+  top: 0;
+  left:0;
+  width: 100%;
+   z-index: 9999;
 }
 
 .brand{
@@ -35,7 +37,7 @@ body{
   text-decoration:none;
   color:white;
   padding:15px;
-  font-weight:200; 
+  font-weight:100; 
   cursor:pointer;
 }
 .hero{
@@ -50,6 +52,7 @@ body{
   height:95vh;
   background-position:top;
   background-size:cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 .content {
@@ -162,8 +165,8 @@ body{
 .skill-section{
      display: grid;
      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-     padding:30px;
-     grid-auto-rows: minmax(300px, auto);
+     margin:30px;
+     grid-auto-rows: minmax(100px, auto);
      align-content: center;
      grid-gap: 3em;
      transition: .3s ease-in all;
@@ -189,12 +192,39 @@ body{
      border-radius: 50%;
      padding: 30px;
 }
-@media (max-width: 780px){
+@media (max-width: 786px){
  .about-section{
   display:grid;
   grid-template-columns:1fr;
-  grid-gap: 1em;
+}
+.navbar{
+  display:flex;
 } 
+.navbar-list{
+  display:none;
+} 
+
+.primary-main{
+  display:block;
+  font-size:25px;
+  font-weight:200; 
+  letter-spacing:10px;
+  animation: MoveInLeft 1s ease-out;
+
+}
+.primary-sub{
+  display:block;
+   font-size:15px;
+  font-weight:200; 
+  letter-spacing:10px;
+ animation: MoveInRight 1s ease-out;
+}
+.icon img{
+  height:40px;
+  margin:0 10px;
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
 }
 
 

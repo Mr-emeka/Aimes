@@ -8,13 +8,13 @@ import Footer from './component/Footer';
 
 function App() {
   return (
-    <React.Fragment>
-     <Navbar />
-     <Hero />
-     <About />
-     <Skills />
-     <Footer />
-    </React.Fragment>
+    <div>
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <Footer />
+    </div>
   );
 }
 
