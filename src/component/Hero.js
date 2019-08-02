@@ -20,10 +20,10 @@ function Hero() {
                       </span>
                    </h1>
                    <div>
-                  <a target="_blank" href="https://www.facebook.com/chukwuemeka.ukpai.90" className="icon"><img src={flogo} alt="facebook logo"/></a>
-                  <a target="_blank" href="https://www.instagram.com/ukpai_chukwuemeka/" className="icon"><img src={ilogo} alt="instagram logo"/></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/ukpai-emeka/" className="icon"><img src={llogo} alt="Linkedin logo"/></a>
-                  <a target="_blank" href="https://github.com/Mr-emeka" className="icon"><img src={glogo} alt="github logo"/></a>
+                  <a target="_blank" rel="noopener noreferrer"  href="https://www.facebook.com/chukwuemeka.ukpai.90" className="icon"><img src={flogo} alt="facebook logo"/></a>
+                  <a target="_blank"  rel="noopener noreferrer" href="https://www.instagram.com/ukpai_chukwuemeka/" className="icon"><img src={ilogo} alt="instagram logo"/></a>
+                  <a target="_blank" rel="noopener noreferrer"  href="https://www.linkedin.com/in/ukpai-emeka/" className="icon"><img src={llogo} alt="Linkedin logo"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/Mr-emeka" className="icon"><img src={glogo} alt="github logo"/></a>
                   </div>
                </div>
           </div>
