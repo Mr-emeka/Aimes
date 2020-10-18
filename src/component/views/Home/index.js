@@ -7,7 +7,7 @@ import Skill from '../Skill'
 import { ReactComponent as Home } from '../../../assets/icons/landing.svg';
 import styled from 'styled-components';
 import { FaCloudDownloadAlt, FaChevronUp } from "react-icons/fa";
-import file  from '../../../assets/docs/Resume.docx'
+import file from '../../../assets/docs/Resume.docx'
 import useScrollTop from '../../../useScrolltop'
 
 const HomeContent = styled.div`
@@ -26,6 +26,17 @@ h3{
     span{
     font-size:.6em;
     }
+}
+`;
+const Download = styled.a`
+svg{
+    position: fixed;
+    bottom: 95px;
+    right: 10px;
+    width: 2.5em;
+    height: auto;
+    cursor: pointer;
+    fill:  ${({ theme }) => theme.text};
 }
 `;
 const Background = styled.span`
@@ -57,11 +68,11 @@ export default ({ toggleTheme, theme, projects }) => {
         <Skill />
         <Portfolio projects={projects} />
         <Contact />
-        <a href={file} target="_blank" rel="noopener noreferrer" download>
-            <FaCloudDownloadAlt className="resume" />
-        </a>
+        <Download href={file} target="_blank" rel="noopener noreferrer" download>
+            <FaCloudDownloadAlt />
+        </Download>
         {top > showPoint ? <Background>
-            <FaChevronUp className="scroll" onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})} />
+            <FaChevronUp className="scroll" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
         </Background> : ''
         }
     </Layout>
