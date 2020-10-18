@@ -1,0 +1,114 @@
+@import "~bootstrap/scss/bootstrap";
+
+.brand {
+    font-size: 1.5em;
+    a {
+        text-decoration: none;
+    }
+}
+.hide-sidebar {
+    display: none;
+}
+.show-sidebar {
+    display: block;
+}
+.landing-svg {
+    height: 100vh;
+    width: 100%;
+}
+.main-img {
+    background-image: url(./assets/img/image.jpg);
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0.5em;
+    transition: all 0.5s;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+.main-img:hover {
+    filter: grayscale(0);
+    transform: rotate(-2deg) scale(1.2);
+}
+.circle-img {
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+.about-section {
+    // font-variant: small-caps;
+    font-weight: 600;
+}
+.about-content {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-gap: 3em;
+}
+.about-content > div:nth-child(2) {
+    padding: 0 20% 0 0 !important;
+}
+
+// Portfolio Section
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+.grid > div {
+    // background: #ede7f6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.form-control:focus {
+    outline: none;
+    border: none;
+}
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+.donate {
+    cursor: pointer;
+}
+.resume {
+    position: fixed;
+    bottom: 95px;
+    right: 10px;
+    width: 2.5em;
+    height: auto;
+    cursor: pointer;
+    fill: red;
+}
+.scroll {
+    width: 2.5em;
+    height: auto;
+    cursor: pointer;
+    fill: red;
+}
+@media screen and (max-width: 989px) {
+    .about-content {
+        display: flex;
+    }
+    .about-content > div:nth-child(2) {
+        padding: 0 !important;
+    }
+}
+@media screen and (max-width: 465px) {
+    .landing-svg {
+        height: 50vh;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .nav-list {
+        display: none !important;
+    }
+    .contact-form {
+        width: 100%;
+        h4 {
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+}
