@@ -9,6 +9,8 @@ import styled from 'styled-components';
 import { FaCloudDownloadAlt, FaChevronUp } from "react-icons/fa";
 import file from '../../../assets/docs/Resume.docx'
 import useScrollTop from '../../../useScrolltop'
+import BModal from '../../custom/Modal'
+import { Modal } from 'react-bootstrap'
 
 const HomeContent = styled.div`
   color:  ${({ theme }) => theme.text};
@@ -54,6 +56,9 @@ svg{
 export default ({ toggleTheme, theme, projects }) => {
     const { top } = useScrollTop();
     const showPoint = 1000;
+    const [modalShow, setModalShow] = React.useState(false);
+    const [details, setDetails] = React.useState()
+
     return (<Layout toggleTheme={toggleTheme} theme={theme}>
         <div>
             <Home className="landing-svg" />
@@ -66,7 +71,7 @@ export default ({ toggleTheme, theme, projects }) => {
 
         <About />
         <Skill />
-        <Portfolio projects={projects} />
+        <Portfolio projects={projects} modalShow={modalShow} setModalShow={setModalShow} details={details} setDetails={setDetails} />
         <Contact />
         <Download href={file} target="_blank" rel="noopener noreferrer" download>
             <FaCloudDownloadAlt />
@@ -75,6 +80,27 @@ export default ({ toggleTheme, theme, projects }) => {
             <FaChevronUp className="scroll" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
         </Background> : ''
         }
+        {/* Modal */}
+
+        <BModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                    Modal heading
+          </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <h4>Centered Modal</h4>
+                <p>
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+                    consectetur ac, vestibulum at eros.
+          </p>
+            </Modal.Body>
+        </BModal>
+
     </Layout>
     )
 }

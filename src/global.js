@@ -15,4 +15,9 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-variant: small-caps;
     transition: all 0.25s linear;
-  }`
+  }
+  div.modal-content{
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+  }
+  `
