@@ -1,7 +1,6 @@
 {
-  "name": "portfolio",
+  "name": "Aimes portfolio",
   "version": "0.1.0",
-  "homepage": "http://Mr-emeka.github.io/devukpai",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
