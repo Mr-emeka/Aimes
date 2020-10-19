@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 // Toggle.styled.js
 const ToggleContainer = styled.button`
   background: ${({ theme }) => theme.gradient};
@@ -10,26 +10,27 @@ const ToggleContainer = styled.button`
   overflow: hidden;
   padding: 0.3rem;
   position: relative;
-  outline:none;
-  &:focus{
-    outline:none;
+  outline: none;
+  &:focus {
+    outline: none;
   }
 
   svg {
     height: auto;
     width: 1.3rem;
     transition: all 0.3s linear;
-    
-    
+
     // sun icon
     &:first-child {
-      transform: ${({ lightTheme }) => lightTheme ? 'translateY(0)' : 'translateY(100px)'};
+      transform: ${({ lightTheme }) =>
+        lightTheme ? "translateY(0)" : "translateY(100px)"};
     }
-    
+
     // moon icon
     &:nth-child(2) {
-      transform: ${({ lightTheme }) => lightTheme ? 'translateY(-100px)' : 'translateY(0)'};
-      fill:  ${({ theme }) => theme.text};
+      transform: ${({ lightTheme }) =>
+        lightTheme ? "translateY(-100px)" : "translateY(0)"};
+      fill: ${({ theme }) => theme.text};
     }
   }
 `;

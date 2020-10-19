@@ -1,1 +1,1 @@
-const DarkColor =  '#121212'
+const DarkColor = "#121212";

@@ -17,14 +17,28 @@
     width: 100%;
 }
 .main-img {
-    background-image: url(./assets/img/image.jpg);
+    background-image: url(./assets/img/aimes2.jpeg);
     min-height: 300px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border-radius: 0.5em;
     transition: all 0.5s;
     filter: grayscale(100%);
     cursor: pointer;
+}
+.rounded-img {
+    background-image: url(./assets/img/aimes2.jpeg);
+    height: 300px;
+    border-radius: 50%;
+    margin: 10px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    cursor: pointer;
+    width: 300px;
+}
+.rounded-img:hover {
+    filter: grayscale(0);
 }
 .main-img:hover {
     filter: grayscale(0);
