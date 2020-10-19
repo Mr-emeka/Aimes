@@ -11,6 +11,7 @@ import file from '../../../assets/docs/Resume.docx'
 import useScrollTop from '../../../useScrolltop'
 import BModal from '../../custom/Modal'
 import { Modal } from 'react-bootstrap'
+import {animateScroll as scroll} from 'react-scroll'
 
 const HomeContent = styled.div`
   color:  ${({ theme }) => theme.text};
@@ -77,7 +78,7 @@ export default ({ toggleTheme, theme, projects }) => {
             <FaCloudDownloadAlt />
         </Download>
         {top > showPoint ? <Background>
-            <FaChevronUp className="scroll" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+            <FaChevronUp className="scroll" onClick={() =>scroll.scrollToTop()} />
         </Background> : ''
         }
         {/* Modal */}

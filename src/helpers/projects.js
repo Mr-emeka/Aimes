@@ -12,7 +12,7 @@ const projects = [
         projectName: "Thecsaen",
         description: "WHO(World Health Organization) MVP web app for gathering surveys and also interviewing agents across the globe",
         technologyUsed: "React, Agora-RTC, Pubnub, Axios, Google Calendar API & Firebase",
-        liveURL: "",
+        liveURL: "https://thecsaen.web.app/",
         imageURL: "",
         gitRepository: "Private GitLab Repository"
     },

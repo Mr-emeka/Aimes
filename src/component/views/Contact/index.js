@@ -14,12 +14,13 @@ border:none;
 font-size:1.2em;
 font-weight:600;
 min-width:10rem;
+box-shadow:0 16px 40px rgba(0,0,0,0.12);
 `;
 
 export default ({ projects }) => {
     return <>
         <div className="container-fluid px-4 mb-5">
-            <div className="contact-section" id="contact">
+            <div className="contact-section" id="contact-section">
                 <h3 className="text-center my-5">Contact</h3>
                 <div className="row">
                     <div className="col-lg-8 col-md-12">

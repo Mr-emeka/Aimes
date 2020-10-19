@@ -5,7 +5,7 @@ import Card from '../../custom/Card'
 export default ({ projects, details, setDetails, modalShow, setModalShow }) => {
     return <>
         <div className="container-fluid px-4 mb-5">
-            <div className="portfolio-section" id="portfolio">
+            <div className="portfolio-section" id="portfolio-section">
                 <h3 className="text-center my-5">Portfolio</h3>
                 <div>
                     <div className="grid">

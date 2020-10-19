@@ -4,7 +4,7 @@ import React from 'react'
 export default () => {
     return <>
         <div className="container-fluid px-4">
-            <div className="about-section" id="about">
+            <div className="about-section" id="about-section">
                 <h3 className="text-center my-5">About Me</h3>
                 <div className="row px-5">
                     <div className="about-content">

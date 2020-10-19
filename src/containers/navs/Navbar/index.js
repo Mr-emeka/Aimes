@@ -5,7 +5,7 @@ import BrandName from './brand.styled'
 import NavList from './nav-list.styled'
 import { ReactComponent as Hamburger } from '../../../assets/icons/ham.svg';
 import styled from 'styled-components'
-
+import { Link as SLink } from "react-scroll";
 
 const HamburgerContainer = styled.span`
 align-self: center;
@@ -30,16 +30,33 @@ export default ({ toggleTheme, theme, history, open, setOpen }) => {
             <BrandName className="brand"><Link to="/"><strong>Aimes</strong> </Link></BrandName>
         </div>
         <div className="d-flex navbar-right">
-            {open ? '' : <HamburgerContainer className="mr-4" onClick={()=>setOpen(true)}>
+            {open ? '' : <HamburgerContainer className="mr-4" onClick={() => setOpen(true)}>
                 <Hamburger />
             </HamburgerContainer>}
 
             <NavList className="d-flex align-self-end mr-5  nav-list">
                 <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
-                <li className="nav-item"><Link to="#about" className="nav-link">About</Link></li>
-                <li className="nav-item"><Link to="#portfolio" className="nav-link">Portfolio</Link></li>
+                <li className="nav-item"><SLink
+                    activeClass="active"
+                    to="about-section"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="nav-link">About</SLink></li>
+                <li className="nav-item"><SLink activeClass="active"
+                    to="portfolio-section"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500} className="nav-link">Portfolio</SLink></li>
                 <li className="nav-item"><Link to="/blog" className="nav-link">Blog</Link></li>
-                <li className="nav-item"><Link to="#contact" className="nav-link">Contact</Link></li>
+                <li className="nav-item"><SLink activeClass="active"
+                    to="contact-section"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500} className="nav-link">Contact</SLink></li>
             </NavList>
             <Toggler toggleTheme={toggleTheme} theme={theme} />
         </div>

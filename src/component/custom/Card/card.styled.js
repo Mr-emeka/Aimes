@@ -2,6 +2,7 @@ import styled from 'styled-components';
 // Toggle.styled.js
 const Card = styled.div`
   background: ${({ theme }) => theme.gradient};
+  box-shadow:0 0 25px rgba(0,0,0,.05);
   border: 2px solid ${({ theme }) => theme.toggleBorder};
   border-radius: 30px;
   color:  ${({ theme }) => theme.text};
