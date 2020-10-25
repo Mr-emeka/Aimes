@@ -10,7 +10,7 @@ const Card = styled.div`
   text-align: center;
   transition: all 0.5s;
   &:hover {
-    transform: rotate(-1deg);
+    transform: translateY(-10px);
   }
   span {
     font-size: 1em;

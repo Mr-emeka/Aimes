@@ -20,8 +20,10 @@
     background-image: url(./assets/img/aimes2.jpeg);
     min-height: 300px;
     background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0.5em;
+    background-size:contain;
+    border-radius: 1em;
+    height:auto;
+    background-position: center;
     transition: all 0.5s;
     filter: grayscale(100%);
     cursor: pointer;
@@ -42,7 +44,7 @@
 }
 .main-img:hover {
     filter: grayscale(0);
-    transform: rotate(-2deg) scale(1.2);
+    transform: rotate(-1deg) scale(1.1);
 }
 .circle-img {
     min-height: 300px;
@@ -56,7 +58,7 @@
 }
 .about-content {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 25% 70%;
     grid-gap: 3em;
 }
 .about-content > div:nth-child(2) {
