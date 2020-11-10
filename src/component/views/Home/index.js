@@ -12,6 +12,7 @@ import useScrollTop from "../../../useScrolltop";
 import BModal from "../../custom/Modal";
 import { Modal } from "react-bootstrap";
 import { animateScroll as scroll } from "react-scroll";
+import Sparkles from "./../../custom/Sparkles/index";
 
 const HomeContent = styled.div`
   color: ${({ theme }) => theme.text};
@@ -31,17 +32,17 @@ const HomeContent = styled.div`
     }
   }
 `;
-const Download = styled.a`
-  svg {
-    position: fixed;
-    bottom: 95px;
-    right: 10px;
-    width: 2.5em;
-    height: auto;
-    cursor: pointer;
-    fill: ${({ theme }) => theme.text};
-  }
-`;
+// const Download = styled.a`
+//   svg {
+//     position: fixed;
+//     bottom: 95px;
+//     right: 10px;
+//     width: 2.5em;
+//     height: auto;
+//     cursor: pointer;
+//     fill: ${({ theme }) => theme.text};
+//   }
+// `;
 const Background = styled.span`
   position: fixed;
   bottom: 50px;
@@ -81,9 +82,9 @@ export default ({ toggleTheme, theme, projects }) => {
         setDetails={setDetails}
       />
       <Contact />
-      <Download href={file} target="_blank" rel="noopener noreferrer" download>
+      {/* <Download href={file} target="_blank" rel="noopener noreferrer" download>
         <FaCloudDownloadAlt />
-      </Download>
+      </Download> */}
       {top > showPoint ? (
         <Background>
           <FaChevronUp
@@ -105,9 +106,9 @@ export default ({ toggleTheme, theme, projects }) => {
         <Modal.Body>
           <h4>Centered Modal</h4>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
+            <Sparkles>Cras mattis consectetur </Sparkles> purus sit amet
+            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
           </p>
         </Modal.Body>
       </BModal>

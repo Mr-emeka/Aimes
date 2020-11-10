@@ -13,7 +13,6 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-variant: small-caps;
     transition: all 0.25s linear;
   }
   div.modal-content{

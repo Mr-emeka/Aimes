@@ -1,14 +1,16 @@
 // theme.js
 export const lightTheme = {
-  body: "#fff",
+  body: "#ffffff",
   text: "#121212",
-  toggleBorder: "#FFF",
-  gradient: "linear-gradient(#39598A, #79D7ED)",
+  gradient: "linear-gradient(#f5f6f9, #f5f6f9)",
+  primaryColor: "#4433ff",
 };
 
 export const darkTheme = {
-  body: "#121212",
-  text: "#FAFAFA",
-  toggleBorder: "#6B8096",
-  gradient: "linear-gradient(#091236, #1E215D)",
+  body: "#0e141b",
+  subtleBackground: "#0e141b",
+  text: "#f2f5f7",
+  subText: "#7e8c9a",
+  primaryColor: "#ff0a78",
+  gradient: "linear-gradient(#1e262f, #1e262f)",
 };

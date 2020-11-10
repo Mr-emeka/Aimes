@@ -3,8 +3,7 @@ import styled from "styled-components";
 const Card = styled.div`
   background: ${({ theme }) => theme.gradient};
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.32);
-  border: 2px solid ${({ theme }) => theme.toggleBorder};
-  border-radius: 30px;
+  border-radius: 10px;
   color: ${({ theme }) => theme.text};
   padding: 0.3rem;
   text-align: center;
@@ -24,11 +23,11 @@ const Card = styled.div`
     background: ${({ theme }) => theme.gradient};
     color: ${({ theme }) => theme.text};
     cursor: pointer;
-    border: 2px solid ${({ theme }) => theme.toggleBorder};
     padding: 0.4em;
     border-radius: 15px;
     font-size: 1em;
     font-weight: 500;
+    border: 1px solid ${({ theme }) => theme.text};
 
     &:focus {
       outline: none;

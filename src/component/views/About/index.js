@@ -1,4 +1,5 @@
 import React from "react";
+import Sparkles from "./../../custom/Sparkles/index";
 
 export default () => {
   return (
@@ -13,8 +14,10 @@ export default () => {
               <div className="main-img d-none d-lg-block"></div>
               <div className="about-text">
                 <div className="rounded-img d-md-none"></div>
-                <div className="px-4">
-                  <h5>Hello, I'm Ukpai Chukwuemeka</h5>
+                <div>
+                  <Sparkles>
+                    <h3>Hello, I'm Ukpai Chukwuemeka,</h3>
+                  </Sparkles>
                   <p>
                     I love JavaScript and everything web. When my dev senses
                     kick-in I build presumably awesome stuff. I stay close to
